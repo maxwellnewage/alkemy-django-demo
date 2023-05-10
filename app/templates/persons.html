@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+    <h1>Personas</h1>
+
+    <div class="d-flex justify-content-end">
+        <a class="btn btn-primary" href="{% url 'person-create' %}">Crear Persona</a>
+    </div>
+
+    <div class="row">
+        {% if persons %}
+            {% include 'persons_table.html' %}
+        {% else %}
+            <p>No hay personas en la BD.</p>
+        {% endif %}
+    </div>
+
+{% endblock %}
+

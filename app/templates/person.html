@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block 'content' %}
+    {% if person %}
+        <p>Persona encontrada: {{ person }}</p>
+    {% else %}
+        <p>Persona no encontrada!</p>
+    {% endif %}
+{% endblock %}
